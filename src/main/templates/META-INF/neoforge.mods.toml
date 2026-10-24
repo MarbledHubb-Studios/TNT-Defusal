@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}
+license="${mod_license}"
+issueTrackerURL="https://marbledhubb.com/report-a-bug"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+displayURL="https://marbledhubb.com/projects/mods/tnt-defusal"
+logoFile="tnt_defuse_icon.png"
+credits="MarbledHubb Studios"
+authors="MarbledNull, WereF0X, Aimiwi"
+
+description='''A mod that adds a simple defusal mechanic to TNT.'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="${neo_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
