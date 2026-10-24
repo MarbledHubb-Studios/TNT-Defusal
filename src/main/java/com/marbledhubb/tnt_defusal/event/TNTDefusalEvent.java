@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.PrimedTnt;
 import net.minecraft.world.entity.player.Player;
@@ -28,6 +29,8 @@ public class TNTDefusalEvent {
 
         if (actualEntity instanceof PrimedTnt) {
             if (stack.is(Items.SHEARS)) {
+                event.setCancellationResult(InteractionResult.SUCCESS);
+                event.setCanceled(true);
                 if (!player.isCreative()) {
                     stack.hurtAndBreak(1, player, (entity) -> {
                         entity.broadcastBreakEvent(hand);
